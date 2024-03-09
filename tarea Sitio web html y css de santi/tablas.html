@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tablas</title>
+    <style>/*SIN EL CSS OPCIONAL*/
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="back">
+            <div class="menu container">
+                <a href="index.html" class="logo">Logo</a>
+                    <img src="img/menu.png" class="menu-icono" alt="">
+                </label>
+                <nav class="navbar">
+                    <ul> <!--lista desordenada-->
+                        <li><a href="formulario.html">Formulario</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="tablas.html">Tablas</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <h1>Tabla de Ejemplo</h1>
+
+    <table>
+        <thead> <!-- define el encabezado de la tabla mi papa-->
+            <tr>
+                <th colspan="3">Datos Personales</th><!--TH SON COMO TITULOS DE LA TABLA-->
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Ciudad</th>
+            </tr>
+        </thead>
+        <tbody><!--contiene el cuerpo de la tabla-->
+            <tr>
+                <td>Santi</td><!-- TD SON LO QUE VA ABAJO DE LA TABLA-->
+                <td>27</td>
+                <td>Medellín</td>
+            </tr>
+            <tr>
+                <td>Yess</td>
+                <td>29</td>
+                <td>Barcelona</td>
+            </tr>
+            <tr>
+                <td>Sora</td>
+                <td rowspan="2">35</td><!-- La celda abarca dos filas -->
+                <td>Brazil</td>
+            </tr>
+            <tr>
+                <td>Lucas</td>
+                <td>Brazil</td>
+            </tr>
+        </tbody>
+        <tfoot> <!--define el pie de la tabla.-->
+            <tr>
+                <td colspan="3">Total de personas: 3</td><!-- Esta fila ocupa todas las columnas -->
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

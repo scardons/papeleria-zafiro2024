@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Multimedia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="back">
+            <div class="menu container">
+                <a href="index.html" class="logo">Logo</a>
+                    <img src="img/menu.png" class="menu-icono" alt="">
+                </label>
+                <nav class="navbar">
+                    <ul> <!--lista desordenada-->
+                        <li><a href="formulario.html">Formulario</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="tablas.html">Tablas</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <h1>Contenido Multimedia</h1>
+
+    <!-- Imagen -->
+    <h2>Imagen</h2>
+    <img src="/img/imagen.png" alt="Descripción de la imagen" width="350">
+
+    <!-- Video -->
+    <h2>Video</h2>
+    <video width="400" controls>
+        <source src="video.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+    <!-- Audio -->
+    <form id="formAudio" enctype="multipart/form-data"></form>
+    <h2>Audio</h2>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+        <label for="archivo">Seleccionar archivo de audio:</label>
+        <input type="file" id="archivo" name="archivo" accept="audio/*">
+        <button type="button" onclick="adjuntarAudio()">Adjuntar</button>
+    </form>
+
+    <!-- Objeto con IFRAME -->
+    <h2>Objeto con IFRAME</h2>
+    <iframe src="https://www.ejemplo.com" width="400" height="300" frameborder="0" allowfullscreen></iframe>
+</body>
+</html>

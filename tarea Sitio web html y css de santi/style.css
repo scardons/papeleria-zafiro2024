@@ -1,0 +1,481 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;/*quitar linea de abajo de los enlaces*/
+    list-style: none;
+}
+
+
+/* Estilo inicial del header */
+header {
+    /* Estilos del header */
+    background-image: linear-gradient(90deg, #00416a, #007bff, #a6c0cd);
+    background-size: cover;
+    background-position: center;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .menu-icono {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .menu-icono-abierto {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-icono {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+    .menu-icono-abierto {
+        display: none;
+    }
+
+    .menu-icono-cerrado {
+        display: block;
+    }
+}
+
+/* Cuando el usuario se desplaza hacia abajo, el header se hace más pequeño */
+header.shrink {
+    height: 90px; /* Altura más pequeña */
+    padding: 15px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    transition: all 1s ease;
+     /* Negrita para el logo */
+}
+
+header.shrink .logo{
+    width: 90px;
+}
+
+
+
+body {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container {
+    width: 90%; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+}
+
+
+.menu {
+    display: flex;
+    justify-content: space-between; /* Alinear elementos a los extremos del contenedor */
+    align-items: center; /* Centrar verticalmente los elementos */
+    padding: 10px 0; /* Espaciado interno del encabezado */
+}
+
+
+
+.menu-icono {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px; /* Ancho de la imagen del menú */
+    height: auto; /* Altura automática de la imagen del menú */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+}
+/*.back{
+    position: absolute; /* Establece la posición absoluta */
+  /*  top: 0; /* Coloca la barra de navegación en la parte superior del encabezado */
+  /*  width: 100%; /* Ocupa todo el ancho del encabezado */
+/*}*/
+
+
+
+.navbar ul {
+    list-style-type: none; /* Quitar viñetas de la lista */
+    display: flex; /* Mostrar los elementos de la lista en línea */
+}
+
+.navbar ul li {
+    margin-bottom: 0px;
+    margin-left: 120px; /* Espaciado entre elementos de la lista */
+    font-size: 20px;
+    
+}
+/*LAS LETRAS DEL HEADER*/
+.navbar ul li a {
+    text-decoration: none; /* Quitar subrayado del enlace */
+    color: #fff; /* Color del texto del enlace */
+    font-weight: bold; /* Negrita para los enlaces */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar ul li a:hover {
+    color: #15a4f9; /* Cambiar el color del enlace al pasar el ratón */
+    transition: color 0.3s;
+}
+
+/* Estilo general del footer */
+/* Estilo general del footer */
+footer {
+    /*position: fixed;  Establece la posición fija 
+    bottom: 0;  Coloca el footer en la parte inferior de la ventana  ESTO ES PARA QUE BAJARA CON EL SCROLL*/ 
+    width: 100%; /* Ocupa todo el ancho disponible */
+    background: linear-gradient(90deg, #00416a, #007bff, #a6c0cd);
+    color: #fff; /* Color del texto */
+    padding: 20px 0; /* Espaciado interno del footer */
+    text-align: center; /* Alinea el texto al centro */
+    z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+/* Estilos para el contenido del footer */
+.container {
+    max-width: 1200px; /* Ancho máximo del contenido del footer */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    display: flex; /* Utiliza flexbox para organizar el contenido */
+    justify-content: space-between; /* Distribuye el contenido horizontalmente */
+}
+
+.footer-content {
+    width: 30%; /* Ancho de cada columna del footer */
+}
+
+.footer-content h3 {
+    font-size: 20px; /* Tamaño de fuente para los títulos */
+    margin-bottom: 15px; /* Espaciado inferior del título */
+}
+
+.footer-content ul {
+    list-style: none; /* Elimina los estilos de lista predeterminados */
+    padding: 0; /* Elimina el relleno de la lista */
+}
+
+.footer-content ul li {
+    margin-bottom: 10px; /* Espaciado inferior entre elementos de la lista */
+}
+
+.footer-content ul li a {
+    color: #fff; /* Color del enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    transition: color 0.3s; /* Transición suave para el cambio de color al pasar el ratón */
+}
+
+.footer-content ul li a:hover {
+    color: #15a4f9; /* Cambia el color del enlace al pasar el ratón */
+}
+
+
+
+main {
+    margin-bottom: 100px; /* Ajustar según el tamaño del footer */
+}
+
+.libertad{
+    display: block;/*PARA ORGANIZAR EL TAMAÑO*/
+    margin: 0 auto 20px;/*CON EL MARGIN CENTRA LA IMAGEN Y AGREGA ESPACIO*/
+    margin-top: 100px;
+}
+.bulevar{
+    display: block;/*PARA ORGANIZAR EL TAMAÑO*/
+    margin: 0 auto 20px;/*CON EL MARGIN CENTRA LA IMAGEN Y AGREGA ESPACIO*/
+    margin-top: 30px;
+    width: 500px;
+}
+
+.main-content{
+    background: linear-gradient(90deg, #00416a, #007bff, #a6c0cd);
+    /*background-color: rgba(255,255,255,0.8);EL COLOR DEL FONDO*/
+    padding: 20px;/*ESPACION INTERNO*/
+    border-radius: 10px;/*LOS BORDES*/
+    max-width: 600px;/*MAXIMO ANCHO*/
+    margin: 0 auto; /*MAXIMO IZQUIERDA*/
+    margin-top: 100px;
+}
+
+.titulo{
+    font-size: 28px;/*tamño del titulo*/
+    text-align: center;/*centrar el tittle*/
+    margin-bottom: 20px;/*darle espacio abajo*/
+}
+.imagen{
+    display: block; /*para centrar imagen*/
+    margin: 0 auto 20px;/*para centrar y darle espacio abajo*/
+    width: 200px;
+}
+.subtitulo {
+    font-size: 32px; /* Tamaño del subtitulo */
+    text-align: left; /* Alinear al centro */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+.parrafo-tradicion {
+    font-size: 40px;
+    margin-bottom: 50px;/*espacio de abajo*/
+}
+.precio{
+    font-size: 36px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.ayuda{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.wpp{
+    display: block;
+    margin: 0 auto 10px;
+    width: 100px;
+}
+
+.click{
+    text-align: center;
+    color: rgb(101, 176, 26);
+}
+
+.fondo_inicio {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    width: 100%; /* Ocupa la mitad del ancho del elemento */
+    height: 550px;
+    margin-top: 100px;
+}
+
+.fondo_inicio img {
+    width: 100%; /* Ocupa la mitad del ancho del elemento */
+}
+
+.fondo_ubicacion {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    width: 100%; /* Ocupa la mitad del ancho del elemento */
+    height: 250px;
+    margin-top: 100px;
+}
+
+.fondo_ubicacion img {
+    width: 100%; /* Ocupa la mitad del ancho del elemento */
+}
+
+
+.productos-container{
+    display: flex; /*establece contenedor como un flexbox*/
+    flex-wrap: wrap;/* Permite que los elementos se envuelvan en múltiples líneas */
+    justify-content: space-between;/* Distribuye los elementos uniformemente a lo largo del contenedor, con espacios entre ellos */
+    margin-top: 30px;/* Agrega un margen superior de 30px */
+    gap: 50px;/* seprar los div */
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.producto1{
+    background-color: #BDF43F;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+.producto_index{
+    display: block; /*centrarlo*/
+    margin: 0 auto 20px; 
+}
+.producto1 h2 {
+    margin-top: 20px;
+    text-align: center; /* Alinear texto al centro */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.producto1 button{
+    display: block;/* Hacer que el botón ocupe todo el ancho disponible */
+    margin: 0 auto; /*centrar*/
+    background-color: #007bff;
+    color: #fff;
+    border: none;/*sin bordes*/
+    padding: 10px 20px;/* Espaciado interno */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;/* Cambiar cursor al pasar sobre el botón */
+}
+
+.producto1 button:hover{
+    background-color: #0056b3;
+}
+
+.producto_index1{
+    display: block;
+    margin: 0 auto 20;
+    max-width: 100%;/* Establece un ancho máximo para la imagen */
+    height: 13.5rem;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/*  PARA QUE MIS IMAGENES SOBRESALGAN UN POCO DEL DIV*/
+.producto_index1:hover{
+    transition: 1000ms;
+    transform: scale(1.2);
+}
+.producto_index:hover{
+    transition: 1000ms;
+    transform: scale(1.2);
+}
+
+.producto_index2{
+    display: block;
+    margin: 0 auto 20;
+    max-width: 100%;/* Establece un ancho máximo para la imagen */
+    height: 13.5rem;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.producto_index2:hover{
+    transition: 1000ms;
+    transform: scale(1.2);
+}
+
+.wpp1 {
+    position: fixed; /*para que flote */
+    bottom: 40px; /* mas pa arriba */
+    right: 20px; /* tirar a la derecha */
+    width: 90px; /* ancho del wpp */
+    height: auto; /* se me organice */
+}
+
+.redes-container {
+    position: fixed; /* Posición fija */
+    right: 0; /* Alineación a la derecha */
+    top: 200px; /* Alineación arriba */
+    /*background: linear-gradient(to right, transparent 96%, #ffffff 50%);  se ve mas lindo si el fondo blanco*/
+    padding: 10px; /* Espaciado interno */
+    display: flex; /* Utilizar flexbox */
+    flex-direction: column; /* Dirección de columna */
+    align-items: flex-end; /* todo a la derecha */
+}
+
+.redes {
+    width: 40px; /* Ancho de las imágenes */
+    height: auto; /* Altura automática según el ancho */
+    margin-bottom: 5px; /* Espaciado entre las imágenes */
+}
+
+.novedades{
+    text-align: center;
+}
+
+.novedades h2 {
+    color: #ffd700; /* Color amarillo */
+    font-size: 64px; /* Tamaño de fuente grande */
+}
+.novedades h5 {
+    color: #080808; /* Color azul */
+    font-size: 38px; /* Tamaño de fuente mediano */
+}
+
+.banner{
+    position: relative;
+}
+.banner_escolar{
+    width: 100%;
+    height: 400px;
+    display: block;
+}
+.banner h4 {
+    position: absolute; /* Posición absoluta para colocar el h4 sobre la imagen */
+    top: 50%; /* Alinea el h4 en la mitad vertical */
+    left: 50%; /* Alinea el h4 en la mitad horizontal */
+    transform: translate(-50%, -50%); /* Centra el h4 */
+    color: #ff8800; /* Color de texto blanco */
+    font-size: 55px; /* Tamaño de fuente grande */
+    text-align: center; /* Centrar el texto horizontalmente */
+    z-index: 1; /* Asegurar que el h4 esté por encima de la imagen */
+}
+
+.marcas{
+    text-align: center;
+}
+
+.marcas h2{
+    color: #ffd700;
+    font-size: 64px;
+}
+
+.marcas h5{
+    color: #007bff;
+    font-size: 33px;
+}
+
+.marca_productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.marca_productos div{
+    width: 25%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.marca_productos img{
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);/*CONVERTIR EN LAS IMAGENES EN BLANCO Y NEGRO*/
+    transition: filter 0.3s;/*TRANSICION BREVE*/
+}
+/*AL PASAR EL MOUSE POR LAS IMAGENES VUELVE A SU ESTADO NORMAL*/
+
+.marca_productos img:hover{
+    filter: grayscale(0%);
+}
